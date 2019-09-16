@@ -1,4 +1,6 @@
 #include "Invoice.h"
+<<<<<<< HEAD
+=======
 
 
 int Invoice::getPartNumber() {
@@ -46,3 +48,4 @@ void Invoice::displayInvoice() {
           quantity,
           unitPrice);
 }
+>>>>>>> ac871c2365ec8f9d33a327396188277b55ec649d
