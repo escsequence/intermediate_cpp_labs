@@ -1,13 +1,21 @@
 #include "Invoice.h"
+<<<<<<< HEAD
 #include "vector"
+=======
+>>>>>>> ac871c2365ec8f9d33a327396188277b55ec649d
 using namespace std;
 bool applicationRunning;
 
 void displayMenu() {
   printf("------------------------------------\n");
+<<<<<<< HEAD
   printf("%d\t-\t%s\n", 1, "Enter a new Invoice");
   printf("%d\t-\t%s\n", 2, "List Invoices");
   printf("%d\t-\t%s\n", 3, "Exit Program");
+=======
+  printf("%d\t-\t%s\n", 1, "New Invoice");
+  printf("%d\t-\t%s\n", 2, "List Invoices & Exit");
+>>>>>>> ac871c2365ec8f9d33a327396188277b55ec649d
   printf("------------------------------------\n");
 }
 
@@ -22,6 +30,7 @@ int getMenuChoice() {
 }
 
 
+<<<<<<< HEAD
 int main() {
   std::vector<Invoice> myInvoices = std::vector<Invoice>();
   applicationRunning = true;
@@ -44,4 +53,50 @@ int main() {
   //Invoice myInvoice = Invoice(1003, "This is a wheel.", 4, 10.25);
   //myInvoice.displayInvoice();
   return 0;
+=======
+string getInvoiceDescription() {
+    string returnValue;
+    cout << "Description: ";
+    getline(cin, returnValue);
+    return returnValue;
+}
+
+int getInvoicePartNumber() {
+    int returnValue;
+    cout << "Part #: ";
+    cin >> returnValue;
+    cin.ignore();
+    return returnValue;
+}
+
+double getInvoicePrice() {
+    double returnValue;
+    cout << "Unit Price: $";
+    cin >> returnValue;
+    cin.ignore();
+    return returnValue;
+}
+
+int getInvoiceQuantity() {
+    int returnValue;
+    cout << "Quantity: ";
+    cin >> returnValue;
+    cin.ignore();
+    return returnValue;
+}
+
+
+
+int main() {
+    Invoice newInvoice;
+
+    newInvoice.setPartNumber(getInvoicePartNumber());
+    newInvoice.setPartDescription(getInvoiceDescription());
+    newInvoice.setUnitPrice(getInvoicePrice());
+    newInvoice.setQuantity(getInvoiceQuantity());
+    cout << endl << "Item successfully added!" << endl << endl;
+
+    newInvoice.displayInvoice();
+    return 0;
+>>>>>>> ac871c2365ec8f9d33a327396188277b55ec649d
 }

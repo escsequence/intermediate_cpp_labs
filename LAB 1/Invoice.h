@@ -7,6 +7,12 @@ private:
   int quantity;
   double unitPrice;
 public:
+<<<<<<< HEAD
+=======
+    Invoice() {
+
+    }
+>>>>>>> ac871c2365ec8f9d33a327396188277b55ec649d
   Invoice(int part, std::string description, int amount,
           double price) : partNumber(part), partDescription(description) {
     setQuantity(amount);
@@ -14,6 +20,7 @@ public:
   }
 
   // Getters and setters
+<<<<<<< HEAD
   int getPartNumber() {
     return partNumber;
   }
@@ -59,4 +66,23 @@ public:
             quantity,
             unitPrice);
   }
+=======
+  int getPartNumber();
+
+  void setPartNumber(int partNumber);
+
+  std::string getPartDescription();
+
+  void setPartDescription(std::string description);
+
+  int getQuantity();
+
+  void setQuantity(int quantity);
+
+  double getUnitPrice();
+
+  void setUnitPrice(double price);
+
+  void displayInvoice();
+>>>>>>> ac871c2365ec8f9d33a327396188277b55ec649d
 };
