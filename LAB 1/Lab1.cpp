@@ -1,21 +1,11 @@
 #include "Invoice.h"
-<<<<<<< HEAD
-#include "vector"
-=======
->>>>>>> ac871c2365ec8f9d33a327396188277b55ec649d
 using namespace std;
 bool applicationRunning;
 
 void displayMenu() {
   printf("------------------------------------\n");
-<<<<<<< HEAD
-  printf("%d\t-\t%s\n", 1, "Enter a new Invoice");
-  printf("%d\t-\t%s\n", 2, "List Invoices");
-  printf("%d\t-\t%s\n", 3, "Exit Program");
-=======
   printf("%d\t-\t%s\n", 1, "New Invoice");
   printf("%d\t-\t%s\n", 2, "List Invoices & Exit");
->>>>>>> ac871c2365ec8f9d33a327396188277b55ec649d
   printf("------------------------------------\n");
 }
 
@@ -98,5 +88,4 @@ int main() {
 
     newInvoice.displayInvoice();
     return 0;
->>>>>>> ac871c2365ec8f9d33a327396188277b55ec649d
 }
