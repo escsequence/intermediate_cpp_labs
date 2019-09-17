@@ -1,7 +1,6 @@
 #include "Invoice.h"
 
-
-int Invoice::getPartNumber() {
+int Invoice::getPartNumber() const {
   return partNumber;
 }
 
@@ -9,7 +8,7 @@ void Invoice::setPartNumber(int partNumber) {
   this->partNumber = partNumber;
 }
 
-std::string Invoice::getPartDescription() {
+std::string Invoice::getPartDescription() const {
   return partDescription;
 }
 
@@ -17,7 +16,7 @@ void Invoice::setPartDescription(std::string description) {
   this->partDescription = description;
 }
 
-int Invoice::getQuantity() {
+int Invoice::getQuantity() const {
   return quantity;
 }
 

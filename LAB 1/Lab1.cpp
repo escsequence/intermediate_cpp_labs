@@ -2,21 +2,21 @@
 using namespace std;
 bool applicationRunning;
 
-void displayMenu() {
-  printf("------------------------------------\n");
-  printf("%d\t-\t%s\n", 1, "New Invoice");
-  printf("%d\t-\t%s\n", 2, "List Invoices & Exit");
-  printf("------------------------------------\n");
-}
-
-
 int getMenuChoice() {
   printf("Please enter a command: ");
   int menuChoice;
   cin >> menuChoice;
-  // Ignore other input
   cin.ignore();
   return menuChoice;
+}
+
+template<typename T>
+T getValue(string message) {
+  T returnValue;
+  cout << message;
+  cin >> returnValue;
+  cin.ignore();
+  return returnValue;
 }
 
 string getInvoiceDescription() {
@@ -26,41 +26,22 @@ string getInvoiceDescription() {
     return returnValue;
 }
 
-int getInvoicePartNumber() {
-    int returnValue;
-    cout << "Part #: ";
-    cin >> returnValue;
-    cin.ignore();
-    return returnValue;
-}
-
-double getInvoicePrice() {
-    double returnValue;
-    cout << "Unit Price: $";
-    cin >> returnValue;
-    cin.ignore();
-    return returnValue;
-}
-
-int getInvoiceQuantity() {
-    int returnValue;
-    cout << "Quantity: ";
-    cin >> returnValue;
-    cin.ignore();
-    return returnValue;
-}
-
-
-
 int main() {
-    Invoice newInvoice;
+  // Create an Invoice objeect
+  Invoice newInvoice = Invoice();
 
-    newInvoice.setPartNumber(getInvoicePartNumber());
-    newInvoice.setPartDescription(getInvoiceDescription());
-    newInvoice.setUnitPrice(getInvoicePrice());
-    newInvoice.setQuantity(getInvoiceQuantity());
-    cout << endl << "Item successfully added!" << endl << endl;
+  // Set and get the values from the user
+  newInvoice.setPartNumber(getValue<int>("Part #: "));
+  newInvoice.setPartDescription(getInvoiceDescription());
+  newInvoice.setUnitPrice(getValue<double>("Unit Price: $"));
+  newInvoice.setQuantity(getValue<int>("Quantity: "));
 
-    newInvoice.displayInvoice();
-    return 0;
+  // Display a message regarding the item being added.
+  cout << endl << "Item successfully added!" << endl << endl;
+
+  // Call a public method in Invoice to show us the Invoice data
+  newInvoice.displayInvoice();
+
+  // Program terminated.
+  return 0;
 }
