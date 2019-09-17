@@ -19,31 +19,6 @@ int getMenuChoice() {
   return menuChoice;
 }
 
-
-<<<<<<< HEAD
-int main() {
-  std::vector<Invoice> myInvoices = std::vector<Invoice>();
-  applicationRunning = true;
-
-  while(applicationRunning) {
-    displayMenu();
-    switch(getMenuChoice()) {
-      case 1:
-      break;
-      case 2:
-      break;
-      case 3:
-        applicationRunning = false;
-        break;
-      default:
-        printf("\nInvalid command. Please try again with a correct entry.\n\n");
-    }
-  }
-  //displayMenu();
-  //Invoice myInvoice = Invoice(1003, "This is a wheel.", 4, 10.25);
-  //myInvoice.displayInvoice();
-  return 0;
-=======
 string getInvoiceDescription() {
     string returnValue;
     cout << "Description: ";
