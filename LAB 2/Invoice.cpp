@@ -8,6 +8,13 @@
 #include "Invoice.h"
 
 /**
+* Standard constructor
+*/
+Invoice::Invoice() {
+
+}
+
+/**
 * Get part number private variable.
 *
 * @return   The part number.
@@ -122,5 +129,5 @@ void Invoice::displayInvoice() {
           quantity,
           unitPrice,
           calculateAmount());
-          
+
 }
