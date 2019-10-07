@@ -2,8 +2,8 @@
 * Member function definitions for class Invoice
 *
 * @Author:      James Johnston
-* @Version:     1.0
-* @Assignment:  Lab 1
+* @Version:     2.0
+* @Assignment:  Lab 2
 *************************/
 #include "Invoice.h"
 

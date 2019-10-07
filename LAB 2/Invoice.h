@@ -21,9 +21,10 @@ public:
   /**
   * Overloading constructor with our inputs
   */
-  Invoice(int partNo, std::string partDetails, double price, int amount) : partNumber(partNo), partDescription(partDetails), quantity(amount), unitPrice(price) {
+  Invoice(int partNo, std::string partDetails, double price, int amount) :
+    partNumber(partNo), partDescription(partDetails),
+    quantity(amount), unitPrice(price) {
   }
-
 
   /**
   * Get part number private variable.

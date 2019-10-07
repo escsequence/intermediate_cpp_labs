@@ -1,16 +1,16 @@
 /*
 * Lab1.cpp
 * Written by:	  James Johnston
-* Date:         9/18/19
-* Version:		  1.0
+* Date:         10/5/19
+* Version:		  2.0
 */
 
 /**
 * Test program for Invoice class.
 *
 * @Author:      James Johnston
-* @Version:     1.0
-* @Assignment:	Lab 1 - Create an Invoice class and call methods to it.
+* @Version:     2.0
+* @Assignment:	Lab 2 - Create an Invoice class and call methods to it.
 */
 #include "ObjectArrayFunctions.h"
 #include <iomanip>
